@@ -59,28 +59,21 @@
  * @returns {Object}
  */
 (function(_) {
-  function enhance(list, source, newObj) {
-    return _.map(list, function(element) {
-      if (newObj) {
-        return _.merge({}, element, source);
-      } else {
-        return _.merge(element, source);
-      }
-    });
-  }
+  function enhance(list, source, options) {
+    options = options || {};
 
-  function enhanceClone(list, source, newObj) {
-    return _.map(list, function(element) {
-      if (newObj) {
-        return _.merge({}, element, _.clone(source));
-      } else {
-        return _.merge(element, _.clone(source));
-      }
+    if (options.cloneTarget) {
+      list = _.cloneDeep(list);
+    }
+
+    _.each(list, function(element) {
+      _.merge(element, options.cloneSource ? _.clone(source) : source);
     });
+
+    return list;
   }
 
   _.mixin({
-    enhance: enhance,
-    enhanceClone: enhanceClone
+    enhance: enhance
   });
 })(_);
