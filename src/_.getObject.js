@@ -7,16 +7,16 @@
     if ( typeof parts === 'string' ) {
       parts = parts.split('.');
     }
-    
+
     if ( typeof create !== 'boolean' ) {
       obj = create;
       create = undefined;
     }
-    
+
     obj = obj || window;
-    
+
     var p;
-    
+
     while ( obj && parts.length ) {
       p = parts.shift();
       if ( obj[p] === undefined && create ) {
@@ -24,7 +24,7 @@
       }
       obj = obj[p];
     }
-    
+
     return obj;
   };
 
@@ -32,7 +32,7 @@
     var parts = name.split('.'),
       prop = parts.pop(),
       obj = getObject( parts, true, context );
-    
+
     // Only return the value if it is set successfully.
     return obj && typeof obj === 'object' && prop
       ? ( obj[prop] = value )
