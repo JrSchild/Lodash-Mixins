@@ -2,7 +2,7 @@
  * Concat all given arrays onto the first given array.
  */
 (function(_) {
-  function concatOn(target, arr1) {
+  function concatOn(target) {
     var arrays = Array.prototype.slice.call(arguments, 1);
 
     _.each(arrays, function(array) {
