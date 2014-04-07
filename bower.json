@@ -1,0 +1,13 @@
+{
+  "name": "Lodash-Mixins",
+  "version": "0.0.0",
+  "authors": [
+    "JrSchild"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "qunit": "~1.14.0"
+  }
+}
