@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="../vendor/qunit/qunit/qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script src="../vendor/qunit/qunit/qunit.js"></script>
+  <script src="../vendor/lodash/dist/lodash.js"></script>
+
+  <!-- Since I would like to leave concatenation and building up to the user
+  all the source files are included seperately. -->
+  <script src="../src/_.clear.js"></script>
+  <script src="../src/_.concatAll.js"></script>
+  <script src="../src/_.concatOn.js"></script>
+  <script src="../src/_.enhance.js"></script>
+  <script src="../src/_.getByKey.js"></script>
+  <script src="../src/_.param.js"></script>
+  <script src="../src/_.partialScope.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
