@@ -1,0 +1,19 @@
+{
+  "name": "Lodash-Mixins",
+  "version": "0.0.0",
+  "description": "Extra utilities for Lodash",
+  "directories": {
+    "test": "test",
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JrSchild/Lodash-Mixins.git"
+  },
+  "author": "Joram Ruitenschild",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JrSchild/Lodash-Mixins/issues"
+  },
+  "homepage": "https://github.com/JrSchild/Lodash-Mixins"
+}
