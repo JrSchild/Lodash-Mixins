@@ -9,8 +9,8 @@
   }
 
   function clearObject(object) {
-    _.each(obj1, function(val, key) {
-       delete obj1[key];
+    _.each(object, function(val, key) {
+       delete object[key];
     });
   }
 
