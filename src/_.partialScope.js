@@ -11,7 +11,7 @@
     }
 
     return _.partial.apply(this, args);
-  };
+  }
 
   _.mixin({
     partialScope: partialScope

@@ -16,7 +16,7 @@
     });
 
     return newObj;
-  };
+  }
 
   _.mixin({
     getByKey: getByKey

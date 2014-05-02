@@ -11,7 +11,7 @@
       });
     });
     return target;
-  };
+  }
 
   _.mixin({
     concatOn: concatOn

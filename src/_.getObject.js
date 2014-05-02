@@ -26,7 +26,7 @@
     }
 
     return obj;
-  };
+  }
 
   function setObject( name, value, context ) {
     var parts = name.split('.'),

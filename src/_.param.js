@@ -35,7 +35,7 @@
     }
       
     return query.length ? query.substr(0, query.length - 1) : query;
-  };
+  }
 
   _.mixin({
     param: param

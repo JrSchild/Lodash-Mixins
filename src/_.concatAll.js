@@ -9,7 +9,7 @@
       result = result.concat(arr);
     });
     return result;
-  };
+  }
 
   _.mixin({
     concatAll: concatAll
