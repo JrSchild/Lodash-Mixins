@@ -30,6 +30,45 @@
 })();
 
 /**
+ * Test _.clearWith
+ */
+(function() {
+  var array = [1, 2, 3];
+  var object = { 'a': 2, 'b': 2 };
+  var nestedObject = {
+    a: { 'a': 2 },
+    b: { 'a': 1 },
+  };
+
+  test('_.clearWith(): Clear data array or object with the passed object/array', 10, function() {
+    var arrayResult = _.clearWith(array, []);
+    var objectResult = _.clearWith(object, {});
+    var nestedObjectResult = _.clearWith(nestedObject, {
+      a: {},
+      b: {}
+    });
+
+    ok(arrayResult === array, 'It is not the same array');
+    deepEqual(arrayResult, [], 'The array is not empty');
+
+    ok(objectResult === object, 'It is not the same object');
+    deepEqual(objectResult, {}, 'The object is not empty');
+
+    ok(nestedObjectResult === nestedObject, 'It is not the same object');
+    deepEqual(nestedObjectResult, {
+      a: {},
+      b: {}
+    }, 'The nested object is not empty');
+
+    throws(_.clearWith([], {}), TypeError, 'Should throw a TypeError');
+    throws(_.clearWith({}, []), TypeError, 'Should throw a TypeError');
+    throws(_.clearWith({ a: [] }, { a: {} }), TypeError, 'Should throw a TypeError');
+    throws(_.clearWith({ a: { b: [] } }, { a: { b: {} } }), TypeError, 'Should throw a TypeError');
+  });
+
+})();
+
+/**
  * Test _.concatAll
  */
 (function() {
