@@ -6,12 +6,16 @@
     while (array.length > 0) {
       array.pop();
     }
+
+    return array;
   }
 
   function clearObject(object) {
     _.each(object, function(val, key) {
        delete object[key];
     });
+
+    return object;
   }
 
   function clear(object) {
@@ -21,6 +25,8 @@
     if (_.isObject(object)) {
       return _.clearObject(object);
     }
+
+    return object;
   }
 
   _.mixin({
