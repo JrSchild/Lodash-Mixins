@@ -25,7 +25,7 @@
 (function(_) {
   function clearWith(data, dataObject) {
     if (typeof data !== typeof dataObject) {
-      throw new TypeError;
+      throw new TypeError();
     }
 
     if (_.isUndefined(data) || _.isUndefined(dataObject)) {
